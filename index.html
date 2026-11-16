@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лейла Кулиева — коммуникационный дизайнер</title>
+<meta name="description" content="Портфолио Лейлы Кулиевой, коммуникационного дизайнера: презентации, digital и motion, айдентика, печать, интерфейсы. Москва.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F1E9;
+  --ink:#151515;
+  --muted:#6b675f;
+  --line:rgba(21,21,21,.14);
+  --accent:#FF5A2C;
+  --lilac:#BFAEFF;
+  --mint:#BDEBD3;
+  --sun:#FFD84D;
+  --peach:#FFC9B8;
+  --card:#FFFFFF;
+  --radius:28px;
+  --display:'Unbounded','Manrope',system-ui,sans-serif;
+  --text:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+h1,h2,h3{text-wrap:balance}
+p,.lead,figcaption span,.dir span{text-wrap:pretty}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(245,241,233,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:500;font-size:16px;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block}
+nav ul{display:flex;gap:28px;list-style:none;font-size:15px;font-weight:500}
+nav a{position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--accent);transition:width .25s}
+nav a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer;background:transparent;color:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--ink);color:var(--bg)}
+.btn.fill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.nav .btn{padding:10px 20px}
+
+/* hero */
+.hero{padding:72px 24px 56px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:8px 16px;border:1.5px solid var(--ink);border-radius:100px;margin-bottom:28px}
+.tag b{width:9px;height:9px;border-radius:50%;background:#2fc26b;display:inline-block;box-shadow:0 0 0 4px rgba(47,194,107,.2)}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(36px,6vw,80px);line-height:1.04;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--accent)}
+h1 .hl{background:linear-gradient(transparent 62%,var(--lilac) 62%);}
+.lead{max-width:640px;margin:28px 0 36px;font-size:19px;color:#3a3833}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+
+/* marquee */
+.marquee{border-block:1.5px solid var(--ink);background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap}
+.track{display:inline-block;padding:16px 0;animation:slide 36s linear infinite;font-family:var(--display);font-size:18px}
+.track span{margin:0 22px}
+.track span:nth-child(even){color:var(--accent)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:96px 0}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);line-height:1.08;letter-spacing:-.025em;margin-bottom:44px;max-width:860px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p{margin-bottom:18px;color:#3a3833}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+.stat{background:var(--card);border-radius:var(--radius);padding:26px;border:1px solid var(--line)}
+.stat strong{display:block;font-family:var(--display);font-weight:500;font-size:38px;letter-spacing:-.03em;line-height:1.1}
+.stat span{color:var(--muted);font-size:15px}
+.stat:nth-child(1){background:var(--mint)}
+.stat:nth-child(4){background:var(--lilac)}
+
+/* directions */
+.dirs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.dir{border-radius:var(--radius);padding:26px;border:1px solid var(--line);background:var(--card);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.dir b{font-family:var(--display);font-weight:500;font-size:17px;line-height:1.25}
+.dir span{font-size:14px;color:#3a3833;margin-top:14px}
+.dir:nth-child(1){background:var(--lilac)} .dir:nth-child(2){background:var(--sun)} .dir:nth-child(3){background:var(--mint)} .dir:nth-child(4){background:var(--peach)}
+
+/* works */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:-14px 0 32px}
+.filters button{padding:10px 18px;border-radius:100px;border:1.5px solid var(--ink);background:transparent;font-weight:600;font-size:14px;cursor:pointer;transition:background .2s,color .2s}
+.filters button:hover{background:rgba(21,21,21,.08)}
+.filters button.on{background:var(--ink);color:var(--bg)}
+.cases{display:grid;gap:28px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:36px;padding:32px}
+.case.hide{display:none}
+.case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 40px;flex-wrap:wrap;margin-bottom:24px}
+.case-head .meta{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.case-head h3{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.8vw,32px);line-height:1.15;letter-spacing:-.02em}
+.case-head p{max-width:520px;color:#3a3833;font-size:16px;margin-top:10px}
+.case-head .chips{max-width:360px;justify-content:flex-end}
+.stage{border-radius:26px;padding:22px;background:var(--t,#E4DBFF);display:grid;gap:14px}
+.stage.t1{--t:#D4E0FC}.stage.t2{--t:#E4DBFF}.stage.t3{--t:#D4F2E2}.stage.t4{--t:#FFF0B0}.stage.t5{--t:#FFDDD1}
+.grid{display:grid;gap:14px;align-items:start}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g6{grid-template-columns:repeat(6,1fr)}
+.stage img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in;transition:transform .3s,box-shadow .3s}
+.stage .grid img:hover{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(0,0,0,.45)}
+.scroll{height:540px;overflow-y:auto;border-radius:16px;background:#fff;box-shadow:0 14px 30px -18px rgba(0,0,0,.4);scrollbar-width:thin}
+.scroll img{border-radius:0}.stage .scroll img:hover{transform:none;box-shadow:none}
+.hint{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* experience */
+.exp{border-top:1.5px solid var(--ink)}
+.row{display:grid;grid-template-columns:200px 1fr 1.3fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start;transition:background .2s,padding .2s}
+.row:hover{background:rgba(255,255,255,.55);padding-left:14px;padding-right:14px}
+.row .when{color:var(--muted);font-weight:600;font-size:15px}
+.row h3{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:-.02em;line-height:1.25}
+.row .role{color:var(--accent);font-weight:700;font-size:15px;margin-top:4px}
+.row p{color:#3a3833;font-size:16px}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;font-weight:600;padding:6px 12px;border-radius:100px;border:1px solid var(--line);background:var(--bg)}
+.skillgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skillbox{background:var(--card);border-radius:var(--radius);padding:30px;border:1px solid var(--line)}
+.skillbox h3{font-family:var(--display);font-weight:500;font-size:18px;margin-bottom:18px}
+.skillbox:nth-child(1){background:var(--lilac)} .skillbox:nth-child(1) .chip{background:rgba(255,255,255,.6);border-color:transparent}
+.skillbox:nth-child(2){background:var(--mint)} .skillbox:nth-child(2) .chip{background:rgba(255,255,255,.6);border-color:transparent}
+.edu{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.edu .skillbox ul{list-style:none;display:grid;gap:14px}
+.edu li{display:grid;grid-template-columns:56px 1fr;gap:10px;font-size:16px}
+.edu li b{color:var(--accent);font-family:var(--display);font-weight:500}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:48px 48px 0 0;padding:96px 0 40px}
+.contact .eyebrow{color:var(--sun)}
+.contact h2{margin-bottom:34px}
+.contact h2 em{font-style:normal;color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:64px}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.fill{background:var(--accent);border-color:var(--accent);color:#fff}
+.contact .btn.fill:hover{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.contact .btn.ghost:hover{background:var(--bg);color:var(--ink)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#a9a59c;font-size:14px;border-top:1px solid rgba(255,255,255,.15);padding-top:26px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.88);display:none;place-items:center;z-index:50;padding:24px;cursor:zoom-out}
+.lb.open{display:grid}
+.lb img{max-height:92vh;max-width:96vw;border-radius:12px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero{padding-top:40px}
+  .hero-grid,.about{grid-template-columns:1fr;gap:40px}
+    .dirs{grid-template-columns:1fr 1fr}
+  .g2,.g3{grid-template-columns:1fr}
+  .case{padding:18px;border-radius:26px}
+  .stage{padding:12px;border-radius:18px}
+  .grid{gap:10px}
+  .g4,.g5{grid-template-columns:repeat(2,1fr)}
+  .g6,.g3.slides{grid-template-columns:repeat(3,1fr)}
+  .g3.mail{grid-template-columns:1fr}
+  .g3.mini{grid-template-columns:repeat(2,1fr)}
+  .case-head .chips{justify-content:flex-start}
+  .row{grid-template-columns:1fr;gap:8px}
+  .skillgrid,.edu{grid-template-columns:1fr}
+  section{padding:68px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .track{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><i></i>Лейла Кулиева</a>
+    <nav>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#works">Работы</a></li>
+        <li><a href="#experience">Опыт</a></li>
+        <li><a href="#skills">Навыки</a></li>
+      </ul>
+    </nav>
+    <a class="btn fill" href="#contact">Связаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="tag"><b></b>Открыта к предложениям</div>
+        <h1>Лейла Кулиева, <span class="hl">коммуникационный</span> <em>дизайнер</em></h1>
+        <p class="lead">Превращаю идеи брендов и продуктов в понятные визуальные сообщения: презентации, digital-продукция, motion, айдентика, печать и интерфейсы. Всё, чтобы компания говорила со своей аудиторией ясно и красиво. Москва, удалённо, гибрид или офис.</p>
+        <div class="cta">
+          <a class="btn fill" href="#works">Смотреть работы</a>
+          <a class="btn ghost" href="#contact">Написать мне</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Визуальные коммуникации</span><span>Digital-дизайн</span><span>Презентации</span><span>Motion</span><span>Айдентика</span><span>Печать и упаковка</span><span>Соцсети</span><span>Интерфейсы</span>
+      <span>Визуальные коммуникации</span><span>Digital-дизайн</span><span>Презентации</span><span>Motion</span><span>Айдентика</span><span>Печать и упаковка</span><span>Соцсети</span><span>Интерфейсы</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <div class="eyebrow">Обо мне</div>
+        <h2>Дизайн, который помогает говорить с аудиторией</h2>
+        <p>Я коммуникационный дизайнер: работаю с тем, как бренд и продукт выглядят и звучат в каждом касании с человеком. С 2020 года делаю презентации, материалы для соцсетей, motion, айдентику, печатную и цифровую продукцию, а также сайты и интерфейсы.</p>
+        <p>Сейчас работаю дизайнером в МегаФоне, в департаменте экосистемных продуктов и цифровых сервисов. Отвечаю за понятный и визуально привлекательный опыт клиентов в цифровых витринах, а решения оцениваю по метрикам: CTR, CR и A/B-тестированию.</p>
+        <p>Люблю вести проект целиком: от сбора задачи и ТЗ до готовых макетов, файлов для печати и передачи в разработку.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><strong>6+ лет</strong><span>в дизайне и коммуникациях</span></div>
+        <div class="stat"><strong>5</strong><span>мест работы: от студий до МегаФона</span></div>
+        <div class="stat"><strong>3</strong><span>образования в дизайне и ИТ</span></div>
+        <div class="stat"><strong>RU · A2</strong><span>русский родной, английский A2</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="dirs reveal">
+        <div class="dir"><b>Презентации и подача</b><span>Дизайн и вёрстка презентаций для брендов</span></div>
+        <div class="dir"><b>Digital и motion</b><span>Соцсети, видео, анимированные эмодзи</span></div>
+        <div class="dir"><b>Айдентика и печать</b><span>Логотипы, упаковка, плакаты, брошюры</span></div>
+        <div class="dir"><b>Сайты и интерфейсы</b><span>Лендинги, веб, приложения, дизайн-системы</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Избранные работы</div>
+        <h2>Примеры работ</h2>
+      </div>
+
+      <div class="filters reveal" role="tablist">
+        <button class="on" data-f="all">Все</button>
+        <button data-f="banners">Баннеры и 3D</button>
+        <button data-f="pres">Презентации</button>
+        <button data-f="mail">Email</button>
+      </div>
+
+      <div class="cases">
+
+        <article class="case reveal" data-cat="banners">
+          <div class="case-head">
+            <div><div class="meta">МегаФон · 3D-кампания</div><h3>Мега5G: хромированный 3D</h3><p>Серия баннеров для продвижения Мега5G: стеклянно-металлические объекты с зелёно-фиолетовым свечением, собранные в единую систему для разных форматов.</p></div>
+            <div class="chips"><span class="chip">3D</span><span class="chip">Баннеры</span><span class="chip">Digital</span><span class="chip">МегаФон</span></div>
+          </div>
+          <div class="stage t1">
+            <div class="grid g2"><img src="images/web/m5g-1.jpg" alt="Баннер Мега5G с 3D-поездом" loading="lazy"><img src="images/web/m5g-2.jpg" alt="Баннер Мега5G про загрузку видео" loading="lazy"></div>
+            <div class="grid g4"><img src="images/web/m5g-3.jpg" alt="Квадратный баннер Мега5G 1.6x" loading="lazy"><img src="images/web/m5g-4.jpg" alt="Квадратный баннер Мега5G с бесконечностью" loading="lazy"><img src="images/web/m5g-5.jpg" alt="Квадратный баннер Мега5G с табличкой" loading="lazy"><img src="images/web/m5g-6.jpg" alt="Квадратный баннер Мега5G с SIM-картой" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="banners">
+          <div class="case-head">
+            <div><div class="meta">МегаФон · B2B</div><h3>3D-баннеры для бизнес-услуг</h3><p>Главные баннеры для услуг МегаФона: спутниковая связь, голосовая сеть, нейросети, техподдержка. Единая 3D-иконография и светлая палитра.</p></div>
+            <div class="chips"><span class="chip">3D</span><span class="chip">Иконки</span><span class="chip">B2B</span><span class="chip">Баннеры</span></div>
+          </div>
+          <div class="stage t2">
+            <div class="grid g2"><img src="images/web/b2b-1.jpg" alt="Баннер IP VPN с технологией VSAT" loading="lazy"><img src="images/web/b2b-2.jpg" alt="Баннер МегаНейросети" loading="lazy"><img src="images/web/b2b-3.jpg" alt="Баннер Выйти на зарубежные рынки" loading="lazy"><img src="images/web/b2b-4.jpg" alt="Баннер Цифровая радиология" loading="lazy"><img src="images/web/b2b-5.jpg" alt="Баннер Расширить голосовую сеть" loading="lazy"><img src="images/web/b2b-6.jpg" alt="Баннер Техническая поддержка операторов связи" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="banners">
+          <div class="case-head">
+            <div><div class="meta">МегаФон · Digital</div><h3>МегаСемья и МегаСилы</h3><p>Баннеры в фирменной зелёной гамме: 3D-объекты и яркие акценты для услуг МегаСемья и МегаСилы.</p></div>
+            <div class="chips"><span class="chip">Баннеры</span><span class="chip">3D</span><span class="chip">Digital</span></div>
+          </div>
+          <div class="stage t3">
+            <div class="grid g3 mini"><img src="images/web/fam-1.jpg" alt="Баннер МегаСемья: объединяйте номера" loading="lazy"><img src="images/web/fam-2.jpg" alt="Баннер Управляйте номерами" loading="lazy"><img src="images/web/fam-3.jpg" alt="Баннер Безлимиты для всей семьи" loading="lazy"></div>
+            <div class="grid g3"><img src="images/web/pow-1.jpg" alt="Баннер МегаСилы: такси" loading="lazy"><img src="images/web/pow-2.jpg" alt="Баннер МегаСилы: мессенджеры" loading="lazy"><img src="images/web/pow-3.jpg" alt="Баннер МегаСилы: навигатор" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="banners">
+          <div class="case-head">
+            <div><div class="meta">МегаКино · Игры</div><h3>МегаКино и «Остров Коржика»</h3><p>Баннеры игр с героями: коржик-кладоискатель и космический маскот, а также промо МегаКинометра: сканирование эмоции и персональная кинокорректировка.</p></div>
+            <div class="chips"><span class="chip">Баннеры</span><span class="chip">Персонажи</span><span class="chip">Игры</span><span class="chip">Digital</span></div>
+          </div>
+          <div class="stage t4">
+            <div class="grid g3 mini"><img src="images/web/kino-7.jpg" alt="Баннер игры «Остров Коржика»: новая игра" loading="lazy"><img src="images/web/kino-5.jpg" alt="Деталка игры «Остров Коржика»" loading="lazy"><img src="images/web/kino-6.jpg" alt="Баннер игры: пора покорять космос" loading="lazy"></div>
+            <div class="grid g4"><img src="images/web/kino-1.jpg" alt="МегаКинометр: станьте героем фильма" loading="lazy"><img src="images/web/kino-2.jpg" alt="МегаКинометр: сканируйте эмоцию" loading="lazy"><img src="images/web/kino-3.jpg" alt="МегаКинометр: киноверсия" loading="lazy"><img src="images/web/kino-4.jpg" alt="МегаКинометр: кинопидборка" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="mail">
+          <div class="case-head">
+            <div><div class="meta">Email · МегаФон</div><h3>Email-рассылки</h3><p>Письма для МегаСемьи и онлайн-кинотеатра START: структура, иерархия блоков и фирменный стиль. Письма можно прокручивать.</p></div>
+            <div class="chips"><span class="chip">Email</span><span class="chip">Вёрстка</span><span class="chip">МегаФон</span></div>
+          </div>
+          <div class="stage t3">
+            <div class="grid g3 mail"><div class="scroll"><img src="images/web/mail-1.jpg" alt="Email по привлечению в МегаСемью" loading="lazy"></div><div class="scroll"><img src="images/web/mail-2.jpg" alt="Email онлайн-кинотеатра START" loading="lazy"></div><div class="scroll"><img src="images/web/mail-3.jpg" alt="Email РК МегаСемья" loading="lazy"></div></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="pres">
+          <div class="case-head">
+            <div><div class="meta">Презентации · Недвижимость</div><h3>Каталог новостроек</h3><p>Презентация-каталог для агентства недвижимости: обложка, подборки районов, планировки с преимуществами, ипотека и банки-партнёры.</p></div>
+            <div class="chips"><span class="chip">Презентации</span><span class="chip">Вёрстка</span><span class="chip">Инфографика</span></div>
+          </div>
+          <div class="stage t1">
+            <div class="grid g2"><img src="images/web/cat-1.jpg" alt="Каталог новостроек, обложка" loading="lazy"><img src="images/web/cat-2.jpg" alt="Слайд с подборкой районов" loading="lazy"><img src="images/web/cat-3.jpg" alt="Слайд с планировкой квартиры" loading="lazy"><img src="images/web/cat-4.jpg" alt="Слайд с банками-партнёрами" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="banners">
+          <div class="case-head">
+            <div><div class="meta">Реклама · Недвижимость</div><h3>Ярмарка недвижимости Казани</h3><p>Серия вертикальных баннеров для двухдневной ярмарки: разные сюжеты в единой красно-белой системе.</p></div>
+            <div class="chips"><span class="chip">Баннеры</span><span class="chip">Кампания</span><span class="chip">Стори</span></div>
+          </div>
+          <div class="stage t5">
+            <div class="grid g6"><img src="images/web/fair-1.jpg" alt="Баннер Ярмарки с храмом" loading="lazy"><img src="images/web/fair-2.jpg" alt="Баннер Ярмарки с небоскрёбом" loading="lazy"><img src="images/web/fair-3.jpg" alt="Баннер Ярмарки ночной" loading="lazy"><img src="images/web/fair-4.jpg" alt="Баннер Ярмарки с зарубежной недвижимостью" loading="lazy"><img src="images/web/fair-5.jpg" alt="Баннер Ярмарки с домом" loading="lazy"><img src="images/web/fair-6.jpg" alt="Баннер Ярмарки с цветком" loading="lazy"></div>
+          </div>
+
+        </article>
+
+        <article class="case reveal" data-cat="pres">
+          <div class="case-head">
+            <div><div class="meta">Презентации · PRT агентство</div><h3>Презентации для брендов</h3><p>Питчи и стратегии для крупных брендов: Nestlé, Gerber, Purina, Wellness и других. Структура, инфографика и визуальные идеи.</p></div>
+            <div class="chips"><span class="chip">Презентации</span><span class="chip">Бренды</span><span class="chip">Инфографика</span></div>
+          </div>
+          <div class="stage t2">
+            <div class="grid g3 slides"><img src="images/web/prt-1.jpg" alt="Презентация Nestogen" loading="lazy"><img src="images/web/prt-2.jpg" alt="Презентация Wellness" loading="lazy"><img src="images/web/prt-3.jpg" alt="Презентация Gerber" loading="lazy"><img src="images/web/prt-4.jpg" alt="Презентация Purina Pro Plan" loading="lazy"><img src="images/web/prt-5.jpg" alt="Слайд «Приветы»" loading="lazy"><img src="images/web/prt-6.jpg" alt="Слайд с примером сторис" loading="lazy"></div>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Опыт</div>
+        <h2>Где я работала</h2>
+      </div>
+      <div class="exp">
+        <div class="row reveal">
+          <div class="when">июнь 2024 — наст. время</div>
+          <div><h3>МегаФон</h3><div class="role">Дизайнер · Москва</div></div>
+          <p>Дизайн цифровых витрин и сервисов департамента по экосистемным продуктам. Работа с KPI: CTR, CR, A/B-тестирование, а также GM и NMC по продуктам.</p>
+        </div>
+        <div class="row reveal">
+          <div class="when">октябрь 2023 — март 2024</div>
+          <div><h3>Агентство недвижимости</h3><div class="role">Digital designer · Казань</div></div>
+          <p>Макеты для соцсетей, видео и моушн, цифровая продукция для ТЦ, метро и мероприятий, анимированные эмодзи для Telegram, вёрстка презентаций.</p>
+        </div>
+        <div class="row reveal">
+          <div class="when">май 2022 — август 2023</div>
+          <div><h3>PRT агентство</h3><div class="role">Веб-дизайнер</div></div>
+          <p>Презентации для Пятёрочки, Gerber, Wellness и других; логотипы, баннеры, упаковка, сайты и лендинги; ведение проектов, ТЗ, дедлайны, работа с CRM.</p>
+        </div>
+        <div class="row reveal">
+          <div class="when">июнь 2021 — апрель 2022</div>
+          <div><h3>Фриланс</h3><div class="role">UI/UX дизайнер</div></div>
+          <p>Сайты, веб и мобильные приложения: исследования, CJM и user flow, wireframes, интерфейсы, UI-kit и дизайн-системы, согласование с заказчиками и разработчиками.</p>
+        </div>
+        <div class="row reveal">
+          <div class="when">июнь 2020 — июнь 2021</div>
+          <div><h3>Лекторий «О’смылсе»</h3><div class="role">UI/UX дизайнер</div></div>
+          <p>Сайт лектория, брендбук, оформление соцсетей, афиши, презентации и рекламные материалы для лекций, включая коллаборацию с ТЦ «Мега».</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Навыки</div>
+        <h2>Инструменты и образование</h2>
+      </div>
+      <div class="skillgrid reveal">
+        <div class="skillbox">
+          <h3>Дизайн и визуал</h3>
+          <div class="chips"><span class="chip">Figma</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Illustrator</span><span class="chip">Blender 3D</span><span class="chip">Midjourney</span><span class="chip">Motion</span><span class="chip">Веб-дизайн</span><span class="chip">Дизайн интерфейсов</span><span class="chip">Прототипирование</span></div>
+        </div>
+        <div class="skillbox">
+          <h3>Вёрстка и no-code</h3>
+          <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Tilda</span><span class="chip">Битрикс</span><span class="chip">Google Presentation</span></div>
+        </div>
+        <div class="skillbox">
+          <h3>Процессы</h3>
+          <div class="chips"><span class="chip">Jira</span><span class="chip">Miro</span><span class="chip">Trello</span><span class="chip">Asana</span><span class="chip">Atlassian</span></div>
+        </div>
+      </div>
+
+      <div class="edu reveal">
+        <div class="skillbox">
+          <h3>Образование</h3>
+          <ul>
+            <li><b>2025</b><span>Казанский (Приволжский) федеральный университет — UI/UX и инструменты цифрового дизайна</span></li>
+            <li><b>2023</b><span>Московский политехнический университет — информационные технологии в дизайне и медиаиндустрии</span></li>
+            <li><b>2019</b><span>Дизайн центр — дизайн</span></li>
+          </ul>
+        </div>
+        <div class="skillbox">
+          <h3>Курсы и языки</h3>
+          <ul>
+            <li><b>2025</b><span>Курс по UI/UX дизайну</span></li>
+            <li><b>2023</b><span>Курс по Figma</span></li>
+            <li><b>2022</b><span>Курс по веб-дизайну</span></li>
+            <li><b>RU</b><span>Русский — родной, английский — A2</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow">Контакты</div>
+    <h2>Давайте сделаем <em>что-нибудь классное</em> вместе</h2>
+    <div class="links">
+      <a class="btn fill" href="mailto:leila_kulieva@icloud.com">leila_kulieva@icloud.com</a>
+      <a class="btn ghost" href="tel:+79777238738">+7 (977) 723-87-38</a>
+    </div>
+    <div class="foot">
+      <span>© 2026 Лейла Кулиева</span>
+      <span>Москва</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+(function(){
+  /* reveal */
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  /* filters */
+  var fb=document.querySelectorAll('.filters button'),shots=document.querySelectorAll('.case');
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+    var f=b.dataset.f;
+    shots.forEach(function(s){
+      var show=f==='all'||(' '+s.dataset.cat+' ').indexOf(' '+f+' ')>-1;
+      s.classList.toggle('hide',!show);
+      if(show)s.classList.add('in');
+    });
+  })});
+
+  /* lightbox for real images */
+  var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  document.querySelectorAll('.stage img').forEach(function(im){im.addEventListener('click',function(){
+    lbi.src=im.currentSrc||im.src;lbi.alt=im.alt;lb.classList.add('open');
+  })});
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+
+})();
+</script>
+</body>
+</html>
