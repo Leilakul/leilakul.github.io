@@ -109,7 +109,7 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
 .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g6{grid-template-columns:repeat(6,1fr)}
 .stage img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in;transition:transform .3s,box-shadow .3s}
 .stage .grid img:hover{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(0,0,0,.45)}
-.scroll{height:540px;overflow-y:auto;border-radius:16px;background:#fff;box-shadow:0 14px 30px -18px rgba(0,0,0,.4);scrollbar-width:thin}
+.scroll{height:620px;overflow-y:auto;border-radius:16px;background:#fff;box-shadow:0 14px 30px -18px rgba(0,0,0,.4);scrollbar-width:thin}
 .scroll img{border-radius:0}.stage .scroll img:hover{transform:none;box-shadow:none}
 .hint{font-size:13px;color:var(--muted);margin-top:12px}
 
@@ -129,6 +129,8 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
 .skillbox{background:var(--card);border-radius:var(--radius);padding:30px;border:1px solid var(--line)}
 .skillbox h3{font-family:var(--display);font-weight:500;font-size:18px;margin-bottom:18px}
 .skillbox:nth-child(1){background:var(--lilac)} .skillbox:nth-child(1) .chip{background:rgba(255,255,255,.6);border-color:transparent}
+.skillbox.ai{grid-column:1/-1;background:var(--sun)}
+.skillbox.ai .chip{background:rgba(255,255,255,.65);border-color:transparent}
 .skillbox:nth-child(2){background:var(--mint)} .skillbox:nth-child(2) .chip{background:rgba(255,255,255,.6);border-color:transparent}
 .edu{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .edu .skillbox ul{list-style:none;display:grid;gap:14px}
@@ -314,11 +316,11 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
 
         <article class="case reveal" data-cat="mail">
           <div class="case-head">
-            <div><div class="meta">Email · МегаФон</div><h3>Email-рассылки</h3><p>Письма для МегаСемьи и онлайн-кинотеатра START: структура, иерархия блоков и фирменный стиль. Письма можно прокручивать.</p></div>
+            <div><div class="meta">Email · МегаФон</div><h3>Email-рассылки</h3><p>Письма для МегаСемьи: структура, иерархия блоков и фирменный стиль. Письма можно прокручивать.</p></div>
             <div class="chips"><span class="chip">Email</span><span class="chip">Вёрстка</span><span class="chip">МегаФон</span></div>
           </div>
           <div class="stage t3">
-            <div class="grid g3 mail"><div class="scroll"><img src="images/web/mail-1.jpg" alt="Email по привлечению в МегаСемью" loading="lazy"></div><div class="scroll"><img src="images/web/mail-2.jpg" alt="Email онлайн-кинотеатра START" loading="lazy"></div><div class="scroll"><img src="images/web/mail-3.jpg" alt="Email РК МегаСемья" loading="lazy"></div></div>
+            <div class="grid g2 mail"><div class="scroll"><img src="images/web/mail-1.jpg" alt="Email по привлечению в МегаСемью" loading="lazy"></div><div class="scroll"><img src="images/web/mail-3.jpg" alt="Email РК МегаСемья" loading="lazy"></div></div>
           </div>
 
         </article>
@@ -405,7 +407,7 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
       <div class="skillgrid reveal">
         <div class="skillbox">
           <h3>Дизайн и визуал</h3>
-          <div class="chips"><span class="chip">Figma</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Illustrator</span><span class="chip">Blender 3D</span><span class="chip">Midjourney</span><span class="chip">Motion</span><span class="chip">Веб-дизайн</span><span class="chip">Дизайн интерфейсов</span><span class="chip">Прототипирование</span></div>
+          <div class="chips"><span class="chip">Figma</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Illustrator</span><span class="chip">Blender 3D</span><span class="chip">Motion</span><span class="chip">Веб-дизайн</span><span class="chip">Дизайн интерфейсов</span><span class="chip">Прототипирование</span></div>
         </div>
         <div class="skillbox">
           <h3>Вёрстка и no-code</h3>
@@ -413,7 +415,11 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
         </div>
         <div class="skillbox">
           <h3>Процессы</h3>
-          <div class="chips"><span class="chip">Jira</span><span class="chip">Miro</span><span class="chip">Trello</span><span class="chip">Asana</span><span class="chip">Atlassian</span></div>
+          <div class="chips"><span class="chip">Jira</span><span class="chip">Miro</span><span class="chip">Trello</span><span class="chip">Asana</span></div>
+        </div>
+        <div class="skillbox ai">
+          <h3>Нейросети</h3>
+          <div class="chips"><span class="chip">GPT</span><span class="chip">Claude</span><span class="chip">Midjourney</span><span class="chip">Nano Banana</span><span class="chip">Kling</span><span class="chip">Seedance</span></div>
         </div>
       </div>
 
