@@ -52,7 +52,9 @@ nav a:hover::after{width:100%}
 
 /* hero */
 .hero{padding:72px 24px 56px}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;align-items:center}
+.hero-grid>*,.about>*,.dir,.stat{min-width:0}
+h1,.lead,.dir b,.stat strong{overflow-wrap:break-word}
 .tag{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:8px 16px;border:1.5px solid var(--ink);border-radius:100px;margin-bottom:28px}
 .tag b{width:9px;height:9px;border-radius:50%;background:#2fc26b;display:inline-block;box-shadow:0 0 0 4px rgba(47,194,107,.2)}
 h1{font-family:var(--display);font-weight:500;font-size:clamp(36px,6vw,80px);line-height:1.04;letter-spacing:-.03em}
@@ -161,8 +163,11 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
 @media (max-width:900px){
   nav ul{display:none}
   .hero{padding-top:40px}
-  .hero-grid,.about{grid-template-columns:1fr;gap:40px}
-    .dirs{grid-template-columns:1fr 1fr}
+  .hero-grid,.about{grid-template-columns:minmax(0,1fr);gap:40px}
+  .dirs{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .dir{padding:20px;min-height:170px}
+  .stat{padding:20px}
+  .stat strong{font-size:32px}
   .g2,.g3{grid-template-columns:1fr}
   .case{padding:18px;border-radius:26px}
   .stage{padding:12px;border-radius:18px}
@@ -175,6 +180,18 @@ h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,56px);l
   .row{grid-template-columns:1fr;gap:8px}
   .skillgrid,.edu{grid-template-columns:1fr}
   section{padding:68px 0}
+}
+@media (max-width:600px){
+  .hero{padding:32px 20px 44px}
+  h1{font-size:clamp(23px,6.4vw,40px);letter-spacing:-.02em}
+  .lead{font-size:17px;margin:22px 0 28px}
+  .dirs{grid-template-columns:minmax(0,1fr)}
+  .dir{min-height:auto;gap:12px}
+  .dir b{font-size:18px}
+  .stats{gap:10px}
+  .stat{padding:16px}
+  .stat strong{font-size:26px}
+  .stat span{font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){
   .track{animation:none}
